@@ -1,0 +1,13 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "MyGrpcServiceProtos";
+
+service SomeService{  
+    rpc getSomeItem(google.protobuf.Empty) returns (SomeModel);  
+}  
+  
+message SomeModel{  
+    string Name=1; 
+    string Description=2;  
+}  
